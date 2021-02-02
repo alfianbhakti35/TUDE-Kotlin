@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/tude_icon"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:layout_height="140dp"/>
+
+        <TextView
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="28sp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etNameRegister"
+            android:hint="Nama Lengkap"
+            android:inputType="text"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawableTint="@color/purple_500"
+            android:drawablePadding="14dp"
+            android:padding="14dp"
+            android:background="@color/white"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etEmailRegister"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawableTint="@color/purple_500"
+            android:drawablePadding="14dp"
+            android:padding="14dp"
+            android:background="@color/white"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etNoHpRegister"
+            android:hint="No. HP"
+            android:inputType="phone"
+            android:drawableLeft="@drawable/ic_call"
+            android:drawableTint="@color/purple_500"
+            android:drawablePadding="14dp"
+            android:padding="14dp"
+            android:background="@color/white"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etAlamatRegister"
+            android:hint="Alamat"
+            android:inputType="text"
+            android:drawableLeft="@drawable/ic_home"
+            android:drawableTint="@color/purple_500"
+            android:drawablePadding="14dp"
+            android:padding="14dp"
+            android:background="@color/white"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etPasswordRegister"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawableTint="@color/purple_500"
+            android:drawablePadding="14dp"
+            android:padding="14dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:text="Register"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:id="@+id/btnToLogin"
+            android:text="Sudah Punya Akun ? Login"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "369153787739",
+    "project_id": "tude-1870d",
+    "storage_bucket": "tude-1870d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369153787739:android:37cc45eae5716b9ef5bc7e",
+        "android_client_info": {
+          "package_name": "com.efix.tude"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369153787739-o6k2g4u7kv1jlgovfg6kgh9gd9advrp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEzYRF8qfV0mpxjDLPeySHX5rWDy1poFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369153787739-o6k2g4u7kv1jlgovfg6kgh9gd9advrp9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
