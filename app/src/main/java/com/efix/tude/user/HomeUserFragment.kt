@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
+import androidx.recyclerview.widget.GridLayoutManager
 import com.efix.tude.R
 import com.efix.tude.adapter.GuideItem
 import com.efix.tude.model.Guide
@@ -86,8 +88,10 @@ class HomeUserFragment : Fragment() {
                     intent.putExtra(GUDE_KEY, guideItem.guide)
                     startActivity(intent)
                 }
-                
+
+                recyclerVewListGuideUser.layoutManager = GridLayoutManager(activity, 2)
                 recyclerVewListGuideUser.adapter = adapter
+
             }
 
             override fun onCancelled(error: DatabaseError) {

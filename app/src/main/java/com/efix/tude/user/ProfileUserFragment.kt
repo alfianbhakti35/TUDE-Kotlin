@@ -7,15 +7,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.efix.tude.LoginActivity
 import com.efix.tude.R
-import com.efix.tude.model.Guide
+import com.efix.tude.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_profile_user.*
+import kotlinx.android.synthetic.main.guide_row.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,10 +43,15 @@ class ProfileUserFragment : Fragment() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var sb = StringBuilder()
                 val coba = snapshot.child("nama").getValue()
+                val img = snapshot.child("img").getValue()
                 sb.append(coba)
                 tvNamaProfileUser.setText(sb)
+                Picasso.get()
+                        .load(img.toString())
+                        .fit()
+                        .centerCrop()
+                        .into(imgProfileUser)
             }
-
             override fun onCancelled(error: DatabaseError) {
                 Log.d("TAGS","Data = ${error.message}")
             }
@@ -68,16 +74,6 @@ class ProfileUserFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileUserFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
         fun newInstance(param1: String, param2: String) =
             ProfileUserFragment().apply {
                 arguments = Bundle().apply {

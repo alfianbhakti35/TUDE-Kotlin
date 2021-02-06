@@ -1,5 +1,9 @@
 package com.efix.tude.model
 
-class Transaksi(val uid : String, val nama : String, val destinasi : String, val guide : String, val noHp : String, val harga : String, val tanggal : String) {
-    constructor() : this("", "", "", "", "", "", "")
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+class Transaksi(val id : String, val uid : String, val nama : String, val destinasi : String, val guide : String, val noHp : String, val harga : String, val tanggal : String, val status : String, val idGuide : String, val img : String) : Parcelable {
+    constructor() : this("", "", "", "", "", "", "", "", "", "", "")
 }

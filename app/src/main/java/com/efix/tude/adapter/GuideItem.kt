@@ -13,7 +13,11 @@ class GuideItem(val guide: Guide):Item<ViewHolder>() {
         viewHolder.itemView.tvDestinasiRaw.text = guide.destinasi
         viewHolder.itemView.tvHargaRow.text = guide.harga
 
-        Picasso.get().load(guide.img).into(viewHolder.itemView.imgGuideRaw)
+        Picasso.get()
+            .load(guide.img)
+            .fit()
+            .centerCrop()
+            .into(viewHolder.itemView.imgGuideRaw)
 
     }
     override fun getLayout(): Int {

@@ -3,4 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_guide">ADDGUIDE</string>
+    <string name="tes_komentar">Anda hanya dapat mengulas aplikasi yang telah didownload dan diinstal sebelumnya. Saat Anda mendownload aplikasi, ulasan akan ditautkan ke Akun Google Anda. Jika Anda mendownload aplikasi tetapi tidak melihat opsi untuk menulis ulasan, pastikan Anda login ke akun yang benar.</string>
+    <string name="untuk_melanjutkan_silahkan_login">Untuk melanjutkan silahkan login.</string>
+    <string name="login">Login</string>
+    <string name="hallo_selamat_datang_di_tude">Hallo! Selamat datang di TUDE.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">REGISTER</string>
+    <string name="belum_punya_akun_register">Belum Punya Akun ? Register</string>
 </resources>

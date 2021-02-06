@@ -3,13 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".user.HomeUserFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerVewListGuideUser"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:background="#E0F2F1"
+        android:layout_gravity="center_horizontal|center_vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

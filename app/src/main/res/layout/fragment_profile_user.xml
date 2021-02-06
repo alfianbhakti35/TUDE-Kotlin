@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0F2F1"
     tools:context=".user.ProfileUserFragment">
 
+
     <LinearLayout
+        android:background="@color/purple_500"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,26 +18,19 @@
             android:src="@drawable/tude_icon"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:layout_width="120dp"
-            android:layout_height="120dp"/>
+            android:layout_width="140dp"
+            android:layout_height="140dp"/>
 
         <TextView
             android:id="@+id/tvNamaProfileUser"
             android:text="Nama Anda"
-            android:textSize="18sp"
+            android:textSize="26sp"
+            android:layout_marginBottom="50dp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:src="@drawable/ic_profie_ui"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-
-
 
     </LinearLayout>
 

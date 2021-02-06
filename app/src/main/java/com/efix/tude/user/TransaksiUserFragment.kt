@@ -1,5 +1,6 @@
 package com.efix.tude.user
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -48,15 +49,9 @@ class TransaksiUserFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TransaksiUserFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+        val TRANS_KEY = "TRANS_KEY"
+
+
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             TransaksiUserFragment().apply {
@@ -69,15 +64,24 @@ class TransaksiUserFragment : Fragment() {
 
     private fun fathTransaksiUser(){
         val uid = FirebaseAuth.getInstance().uid
-        val ref = FirebaseDatabase.getInstance().getReference("transaksi/$uid")
+        val ref = FirebaseDatabase.getInstance().getReference("transaksi/")
         ref.addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 val adapter = GroupAdapter<ViewHolder>()
                 snapshot.children.forEach {
                     val transaksi = it.getValue(Transaksi::class.java)
                     if (transaksi != null){
-                        adapter.add(TransaksiItem(transaksi))
+                        if (transaksi.uid == uid){
+                            adapter.add(TransaksiItem(transaksi))
+                        }
                     }
+                }
+                adapter.setOnItemClickListener { item, view ->
+                    val transaksiItem = item as TransaksiItem
+
+                    val intent = Intent(view.context, StatusTransaksiActivity::class.java)
+                    intent.putExtra(TRANS_KEY, transaksiItem.trasaksi)
+                    startActivity(intent)
                 }
                 recyclerVewListTransaksiUser.adapter = adapter
             }

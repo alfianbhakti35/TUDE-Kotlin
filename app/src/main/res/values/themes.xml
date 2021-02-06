@@ -41,4 +41,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="buttonstyle1" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/oranye</item>
+        <item name="colorButtonNormal">@color/oranye</item>
+    </style>
+
 </resources>

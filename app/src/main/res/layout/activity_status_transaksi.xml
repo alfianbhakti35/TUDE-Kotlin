@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0F2F1"
+    android:orientation="vertical"
+    tools:context=".user.StatusTransaksiActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/purple_500"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="No. Pesanan :"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/idTransaksiUser"
+                android:text="718437914738942319"
+                android:textSize="14sp"
+                android:textColor="@color/oranye"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@drawable/backgroun_radius_putih"
+            android:layout_margin="6dp"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:text="Ststus"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvStatusPesananUser"
+                    android:textSize="14sp"
+                    android:text="Sukses"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:id="@+id/imgStatusPesanan"
+                android:src="@drawable/ic_sukses_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="@drawable/backgroun_radius_putih"
+            android:layout_margin="6dp"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:text="Detail Transaksi"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:text="Destinasi"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tVNamaDestinasiStatusTransaksi"
+                    android:text="Pantai Pink"
+                    android:textSize="14sp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:text="Nama Guide"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tVNamaGuideStatusTransaksi"
+                    android:text="Muhiddin"
+                    android:textSize="14sp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:text="Harga"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tVHargaStatusTransaksi"
+                    android:text="Pantai Pink"
+                    android:textSize="14sp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:text="Tanggal"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tVTanggalStatusTransaksi"
+                    android:text="COD"
+                    android:textSize="14sp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:text="Metoe Pembayaran"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tVMetodePembaaranStatusTransaksi"
+                    android:text="COD"
+                    android:textSize="14sp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutKomentar"
+            android:orientation="vertical"
+            android:background="@drawable/backgroun_radius_putih"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:text="Komentar dan Rating"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RatingBar
+                android:id="@+id/rbRatingUser"
+                android:layout_gravity="center"
+                android:stepSize="1"
+                android:numStars="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etKomentarUser"
+                android:hint="Komentar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnKomendanReting"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="Komentar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progressStatusPesanan"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

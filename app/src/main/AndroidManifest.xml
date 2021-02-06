@@ -9,6 +9,12 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_tude"
@@ -16,15 +22,23 @@
         android:roundIcon="@mipmap/ic_launcher_tude_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TUDE">
-        <activity android:name=".user.InputTransaksiActivity"></activity>
-        <activity android:name=".admin.AddGuideActivity" />
-        <activity android:name=".AdminMenuActivity" />
-        <activity android:name=".UserMenuActivity" />
+        <activity android:name=".user.KomentarUserActivity"></activity>
+        <activity android:name=".admin.ViewGuideActivity" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".user.StatusTransaksiActivity"
+            android:theme="@style/Theme.AUTH" />
+        <activity android:name=".admin.TransaksiAdminActivity" />
+        <activity
+            android:name=".user.InputTransaksiActivity"
+            android:theme="@style/Theme.AUTH" />
+        <activity android:name=".admin.AddGuideActivity" />
+        <activity android:name=".admin.AdminMenuActivity" />
+        <activity android:name=".user.UserMenuActivity" />
+        <activity
+            android:name=".auth.RegisterActivity"
             android:theme="@style/Theme.AUTH" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".auth.LoginActivity"
             android:theme="@style/Theme.AUTH" />
         <activity
             android:name=".SplashScreenActivity"

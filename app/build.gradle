@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId "com.efix.tude"
-        minSdkVersion 20
+        minSdkVersion 22
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -60,6 +60,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'org.fabiomsr:moneytextview:1.1.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'id.zelory:compressor:3.0.0'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

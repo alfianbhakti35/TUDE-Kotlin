@@ -9,7 +9,6 @@ import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.efix.tude.AdminMenuActivity
 import com.efix.tude.R
 import com.efix.tude.model.Guide
 import com.google.firebase.database.FirebaseDatabase
@@ -44,13 +43,13 @@ class AddGuideActivity : AppCompatActivity() {
             selecPhoto = data.data
             val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selecPhoto)
             ivDestinasi.setImageBitmap(bitmap)
-
         }
     }
 
     private fun uploadData(){
         val fileName = UUID.randomUUID().toString()
         val ref = FirebaseStorage.getInstance().getReference("images/$fileName")
+
 
         ref.putFile(selecPhoto!!)
                 .addOnSuccessListener {
@@ -72,7 +71,7 @@ class AddGuideActivity : AppCompatActivity() {
     private fun saveToFirebaseDatabase(imageUrl : String, nameFile : String){
         val ref = FirebaseDatabase.getInstance().getReference("guide/$nameFile")
 
-        val guide = Guide(etNamaDestinasi.text.toString(), etNamaGuide.text.toString(), etHarga.text.toString(), imageUrl)
+        val guide = Guide(nameFile, etNamaDestinasi.text.toString(), etNamaGuide.text.toString(), etHarga.text.toString(), imageUrl)
 
         Log.d("TAGS", "DATA = ${guide.destinasi}")
 
