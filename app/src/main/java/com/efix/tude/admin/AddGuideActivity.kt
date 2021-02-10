@@ -77,7 +77,6 @@ class AddGuideActivity : AppCompatActivity() {
 
         ref.setValue(guide)
                 .addOnSuccessListener {
-
                     Toast.makeText(this, "Data Berhasil disimpan", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, AdminMenuActivity::class.java)
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)

@@ -105,7 +105,7 @@ class RegisterActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
         val role = "user"
-        val user = User(uid, etNameRegister.text.toString(), etEmailRegister.text.toString(), etNoHpRegister.text.toString(), etAlamatRegister.text.toString(), etPasswordRegister.text.toString(), role, imageUrl)
+        val user = User(uid, etNameRegister.text.toString(), etEmailRegister.text.toString(), etNoHpRegister.text.toString(), etAlamatRegister.text.toString(), etPasswordRegister.text.toString(), role, imageUrl, "-", "-")
 
         ref.setValue(user)
             .addOnSuccessListener {

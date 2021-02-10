@@ -22,7 +22,11 @@
         android:roundIcon="@mipmap/ic_launcher_tude_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TUDE">
-        <activity android:name=".user.KomentarUserActivity"></activity>
+        <activity android:name=".guide.HomeGuideActivity"></activity>
+        <activity android:name=".guide.StatusDaftarGuideActivity" />
+        <activity android:name=".auth.RegisterGuideActivity" />
+        <activity android:name=".user.DetailStatusPesananActivity" />
+        <activity android:name=".user.KomentarUserActivity" />
         <activity android:name=".admin.ViewGuideActivity" />
         <activity
             android:name=".user.StatusTransaksiActivity"

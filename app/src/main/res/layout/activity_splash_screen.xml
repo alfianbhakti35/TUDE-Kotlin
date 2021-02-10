@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:text="EFIX Dev"
         android:layout_marginBottom="16dp"
-        android:textSize="24sp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,6 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="support by"
+        android:textSize="10sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

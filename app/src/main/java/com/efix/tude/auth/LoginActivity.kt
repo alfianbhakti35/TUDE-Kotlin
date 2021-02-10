@@ -39,7 +39,9 @@ class LoginActivity : AppCompatActivity() {
         val email = etEmailLogin.text.toString()
         val password = etPasswordLogin.text.toString()
 
-        if (email == null || password == null)return
+        if (email == null || password == null){
+            Toast.makeText(this, "Email atau Password tidak boleh kosong", Toast.LENGTH_SHORT).show()
+        }
 
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.efix.tude.R
 import com.efix.tude.adapter.TransaksiItem
 import com.efix.tude.model.Transaksi
@@ -31,6 +32,7 @@ class TransaksiUserFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
 
         fathTransaksiUser()
 

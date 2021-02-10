@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import com.efix.tude.R
 import com.efix.tude.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -35,6 +36,7 @@ class ProfileUserFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
 
         val uid = FirebaseAuth.getInstance().currentUser?.uid
 
@@ -71,6 +73,7 @@ class ProfileUserFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile_user, container, false)
+
     }
 
     companion object {

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.efix.tude.R
 import com.efix.tude.adapter.GuideItem
@@ -37,6 +38,7 @@ class HomeUserFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (requireActivity() as AppCompatActivity).supportActionBar?.show()
 
         fathGuideList()
 
